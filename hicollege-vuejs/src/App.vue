@@ -1,12 +1,37 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div class="container">
+        <header-section></header-section>
+        <progressBar></progressBar>
+        <courseIntro></courseIntro>
+        <registerForm></registerForm>
+        <displayTableData></displayTableData>
+    </div>
   </div>
 </template>
 
 <script>
+import headerSection from '@/components/header.vue'
+import progressBar from '@/components/progressBar.vue'
+import courseIntro from '@/components/courseIntro.vue'
+import registerForm from '@/components/registerForm.vue'
+import displayTableData from '@/components/displayTableData.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+
+    }
+  },
+  components: {
+    'header-section': headerSection,
+    progressBar,
+    courseIntro,
+    registerForm,
+    displayTableData
+  }
+
 }
 </script>
 
