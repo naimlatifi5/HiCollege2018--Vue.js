@@ -5,8 +5,7 @@
         <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
         </div>
-        <div class="row">
-          <div class="header section">
+        <div class="row section">
             <div class="section__header">
                 <h2>Vue.js HiCollege course</h2>
             </div>
@@ -15,7 +14,7 @@
                 Vue is becoming extremely popular JavaScript framework nowadays which lets you build dynamic and interactive web apps in a simple way. The secret of Vue.js framework is its simplicity, however to help you get started with the framework I built this course to get you familiar with the core concepts of the framework.
               </p>
             </div>
-          </div>
+
         </div>
 
 
