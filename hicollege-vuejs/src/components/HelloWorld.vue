@@ -2,9 +2,7 @@
   <div class="hello">
     <div class="container">
         <h1>RSVP- APP <span class="badge badge-secondary badge-secondary--color">HiCollege HIQ</span></h1>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-        </div>
+        <progressBar></progressBar>
         <div class="row section">
             <div class="section__header">
                 <h2>Vue.js HiCollege course</h2>
@@ -14,11 +12,7 @@
                 Vue is becoming extremely popular JavaScript framework nowadays which lets you build dynamic and interactive web apps in a simple way. The secret of Vue.js framework is its simplicity, however to help you get started with the framework I built this course to get you familiar with the core concepts of the framework.
               </p>
             </div>
-
         </div>
-
-
-
 
           <div class="row section">
             <div class="section__header">
@@ -52,10 +46,6 @@
               </div>
             </div>
           </div>
-
-
-
-
           <div class="row">
             <table class="table table-hover">
               <thead>
@@ -90,12 +80,16 @@
 </template>
 
 <script>
+import progressBar from './progressBar.vue'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to HiCollege HIQ coures with Vue.js'
     }
+  },
+  components: {
+    progressBar
   }
 }
 </script>
