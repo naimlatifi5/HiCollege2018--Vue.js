@@ -1,5 +1,10 @@
 <template>
-   <h1>RSVP- APP <span class="badge badge-secondary badge-secondary--color">HiCollege HIQ</span></h1>
+    <div class="header">
+        <slot></slot>
+          <div class="section__header">
+            <slot name="headerWithSection"></slot>
+          </div>
+    </div>
 </template>
 
 <script>
