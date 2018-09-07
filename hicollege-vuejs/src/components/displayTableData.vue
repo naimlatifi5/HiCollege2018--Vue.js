@@ -1,5 +1,4 @@
 <template>
-  <div class="row">
     <table class="table table-hover">
       <thead>
         <tr>
@@ -9,29 +8,31 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td><button type="button" class="btn btn-danger">Danger</button></td>
-        </tr>
-        <tr>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td><button type="button" class="btn btn-danger">Danger</button></td>
-        </tr>
-        <tr>
-          <td>Jacob</td>
-          <td>Thorenor</td>
-          <td><button type="button" class="btn btn-danger">Danger</button></td>
+        <tr v-for="item in userData">
+          <td>{{item.name}}</td>
+          <td>{{item.comment}}</td>
+          <td><removeButton></removeButton></td>
         </tr>
       </tbody>
     </table>
-  </div>
 </template>
 
 <script>
+import removeButton from './removeButton.vue';
 export default {
-  name: 'displayTableData'
+  name: 'displayTableData',
+  props: {
+    userData: {
+      type: Array,
+      required: true
+    }
+  },
+  mounted() {
+    console.log(this.userData);
+  },
+  components: {
+    removeButton
+  }
 }
 </script>
 

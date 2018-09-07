@@ -3,11 +3,9 @@
     <div class="container">
       <!-- v-html directive for appending html data-->
         <header-section v-html="mainPageHeader"></header-section>
-
         <progressBar></progressBar>
         <courseIntro :content=contentIntroCourse></courseIntro>
         <registerForm></registerForm>
-        <displayTableData></displayTableData>
     </div>
   </div>
 </template>
@@ -17,7 +15,6 @@ import headerSection from '@/components/header.vue'
 import progressBar from '@/components/progressBar.vue'
 import courseIntro from '@/components/courseIntro.vue'
 import registerForm from '@/components/registerForm.vue'
-import displayTableData from '@/components/displayTableData.vue'
 
 export default {
   name: 'App',
@@ -32,8 +29,7 @@ export default {
     'header-section': headerSection,
     progressBar,
     courseIntro,
-    registerForm,
-    displayTableData
+    registerForm
   }
 
 }

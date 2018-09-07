@@ -3,10 +3,10 @@
     <headerSection>
       <template slot="headerWithSection">
         <div class="row">
-          <div class="col-9 align-left">
+          <div class="col-4 align-left">
             <h5>55 people attending</h5>
           </div>
-          <div class="col-3">
+          <div class="col-8 align-right">
             <button type="button" class="btn btn-primary btn-lg" @click="toggleForm">I will attend</button>
           </div>
         </div>
@@ -35,12 +35,15 @@
         </div>
       </div>
     </div>
+    <displayTableData :userData="formData"></displayTableData>
   </div>
+
+
 </template>
 
 <script>
 import headerSection from './header.vue'
-
+import displayTableData from './displayTableData.vue'
 export default {
   name: 'registerForm',
   data () {
@@ -67,11 +70,15 @@ export default {
         comment: this.comment
       }
       this.formData.push(formDataObj);
-      console.log(this.formData)
+      // clear the form after submitv
+      this.name = '';
+      this.email = '';
+      this.comment = ''
     }
   },
   components: {
-    headerSection
+    headerSection,
+    displayTableData
   }
 }
 </script>
