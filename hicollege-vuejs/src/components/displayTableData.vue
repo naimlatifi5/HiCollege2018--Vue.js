@@ -1,5 +1,5 @@
 <template>
-    <table class="table table-hover">
+    <table class="table table-hover" v-if="userData.length">
       <thead>
         <tr>
           <th scope="col">Name</th>
@@ -8,13 +8,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in userData">
+        <tr v-for="(item,index) in userData" :id="index">
           <td>{{item.name}}</td>
           <td>{{item.comment}}</td>
           <td><removeButton></removeButton></td>
         </tr>
       </tbody>
     </table>
+    <div v-else>
+       <p>
+         There are no attendance yet...
+       </p>
+    </div>
 </template>
 
 <script>
@@ -26,9 +31,6 @@ export default {
       type: Array,
       required: true
     }
-  },
-  mounted() {
-    console.log(this.userData);
   },
   components: {
     removeButton
