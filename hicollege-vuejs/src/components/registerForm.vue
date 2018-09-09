@@ -4,7 +4,7 @@
       <template slot="headerWithSection">
         <div class="row">
           <div class="col-4 align-left">
-            <h5>55 people attending</h5>
+            <h5>{{formData.length}} / {{numberOfAttandence}} people attending</h5>
           </div>
           <div class="col-8 align-right">
             <button type="button" class="btn btn-primary btn-lg" @click="toggleForm">I will attend</button>
@@ -46,6 +46,9 @@ import headerSection from './header.vue'
 import displayTableData from './displayTableData.vue'
 export default {
   name: 'registerForm',
+  props: {
+    numberOfAttandence: Number
+  },
   data () {
     return {
       formtoggle: false,
@@ -69,11 +72,20 @@ export default {
         email: this.email,
         comment: this.comment
       }
-      this.formData.push(formDataObj);
+        //make sure that you do not send empty data on button submit
+        // check if name length is greater than 0
+        if(this.name.length > 0) {
+           this.formData.push(formDataObj);
+        }
+
+
+
       // clear the form after submitv
       this.name = '';
       this.email = '';
       this.comment = ''
+
+      this.$root.$emit('arrayFormLength', this.formData.length)
     }
   },
   components: {

@@ -1,10 +1,10 @@
 <template>
-  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-danger">Delete</button>
 </template>
 
 <script>
 export default {
-  name: 'button'
+  name: 'ButtonElement'
 }
 </script>
 

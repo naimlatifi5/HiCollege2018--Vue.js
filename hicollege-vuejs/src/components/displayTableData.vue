@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import removeButton from './removeButton.vue';
+import removeButton from './removeButton.vue'
 export default {
   name: 'displayTableData',
   props: {
