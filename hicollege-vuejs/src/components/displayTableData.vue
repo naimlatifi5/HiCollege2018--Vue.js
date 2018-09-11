@@ -8,10 +8,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item,index) in userData" :id="index">
+        <tr v-for="(item,index) in userData" :index="index" :key="index">
           <td>{{item.name}}</td>
           <td>{{item.comment}}</td>
-          <td><removeButton></removeButton></td>
+          <td><removeButton :index="index" @itemClicked="removeItemFromArray"></removeButton></td>
         </tr>
       </tbody>
     </table>
@@ -30,6 +30,12 @@ export default {
     userData: {
       type: Array,
       required: true
+    }
+  },
+  methods: {
+    removeItemFromArray (index) {
+      // get rid of the item based on the index array
+      this.userData.splice(index, 1)
     }
   },
   components: {

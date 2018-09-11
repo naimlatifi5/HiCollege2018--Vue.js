@@ -1,10 +1,21 @@
 <template>
-  <button type="button" class="btn btn-danger">Delete</button>
+  <button type="button" class="btn btn-danger" @click="itemClicked">Delete</button>
 </template>
 
 <script>
 export default {
-  name: 'ButtonElement'
+  name: 'ButtonElement',
+  props: {
+    index: {
+      type: Number,
+      required: true
+    }
+  },
+  methods: {
+    itemClicked (e) {
+      this.$emit('itemClicked', this.index)
+    }
+  }
 }
 </script>
 

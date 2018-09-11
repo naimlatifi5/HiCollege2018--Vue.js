@@ -1,5 +1,6 @@
 <template>
   <div class="row section">
+    <progressBar :rsvpCapacity="numberOfAttandence" :rsvpCapacityPercentage="rsvpPercentCapacity" :arrayLength="formData.length"></progressBar>
     <headerSection>
       <template slot="headerWithSection">
         <div class="row">
@@ -12,7 +13,6 @@
         </div>
       </template>
     </headerSection>
-
     <div class="section__content" v-if="formtoggle">
       <div class="row">
         <div class="col-12">
@@ -37,13 +37,12 @@
     </div>
     <displayTableData :userData="formData"></displayTableData>
   </div>
-
-
 </template>
 
 <script>
 import headerSection from './header.vue'
 import displayTableData from './displayTableData.vue'
+import progressBar from './progressBar.vue'
 export default {
   name: 'registerForm',
   props: {
@@ -55,8 +54,12 @@ export default {
       formData: [],
       name: '',
       email: '',
-      comment: ''
+      comment: '',
+      rsvpPercentCapacity: 0
     }
+  },
+  computed: {
+
   },
   methods: {
     toggleForm (e) {
@@ -64,7 +67,7 @@ export default {
       this.formtoggle = !this.formtoggle
     },
     slideUpForm () {
-      this.formtoggle = false;
+      this.formtoggle = false
     },
     formSubmit (e) {
       let formDataObj = {
@@ -72,28 +75,25 @@ export default {
         email: this.email,
         comment: this.comment
       }
-        //make sure that you do not send empty data on button submit
-        // check if name length is greater than 0
-        if(this.name.length > 0) {
-           this.formData.push(formDataObj);
-        }
-
-
-
+      // make sure that you do not send empty data on button submit
+      // check if name length is greater than 0
+      if (this.name.length > 0 && this.rsvpPercentCapacity < 100) {
+        this.formData.push(formDataObj)
+        // TODO - save data to local storage or to fake json server
+      }
       // clear the form after submitv
-      this.name = '';
-      this.email = '';
+      this.name = ''
+      this.email = ''
       this.comment = ''
-
-      this.$root.$emit('arrayFormLength', this.formData.length)
+      this.rsvpPercentCapacity = this.formData.length / (this.numberOfAttandence / 100)
     }
   },
   components: {
     headerSection,
-    displayTableData
+    displayTableData,
+    progressBar
   }
 }
 </script>
-
 <style lang="scss">
 </style>
