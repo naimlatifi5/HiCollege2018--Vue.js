@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/components/home'
+import RsvPForm from '@/components/rsvpApp'
 import DataBinding from '@/components/vue-essentials/dataBinding'
 import ListConditionalRendering from '@/components/vue-essentials/listConditionalRendering'
 import BindingAttributes from '@/components/vue-essentials/bindingAttributes'
@@ -9,15 +10,14 @@ import EventHandling from '@/components/vue-essentials/eventHandling'
 import Components from '@/components/vue-essentials/components'
 import Props from '@/components/vue-essentials/props'
 import Slots from '@/components/vue-essentials/slots'
-
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: Home
     },
     {
       path: '/dataBinding',
@@ -58,6 +58,11 @@ export default new Router({
       path: '/slots',
       name: 'Slots',
       component: Slots
+    },
+    {
+      path: '/rsvpForm',
+      name: 'rsvpForm',
+      component: RsvPForm
     }
   ]
 })

@@ -1,11 +1,10 @@
 <template>
   <div class="dataBinding">
     <h1>Hello Two way data binding</h1>
-
     <p>
-Show the question: {{question}}
+      Show the question: {{question}}
     </p>
-    <input v-model="question" />
+    <input class="form-control form-control-lg" type="text" v-model="question">
   </div>
 </template>
 
