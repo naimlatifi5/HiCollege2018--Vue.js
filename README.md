@@ -1,17 +1,17 @@
 # HiCollege2018--Vue.js
 
-#Two way data binding
+# Two way data binding
 
-#List and conditional rendering
+# List and conditional rendering
 
-#Binding attributes and style
+# Binding attributes and style
 
-#Data, methods, watchers, filters instance properties
+# Data, methods, watchers, filters instance properties
 
-#Event Handling
+# Event Handling
 
-#Components
+# Components
 
-#Props and Props validations
+# Props and Props validations
 
-#Slots  
+# Slots  
