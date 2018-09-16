@@ -9,7 +9,18 @@
 <script>
 export default {
   name: 'increment',
-  props: ['myChildComponent', 'counter'],
+  props: //['myChildComponent', 'counter'],
+   {
+     myChildComponent: { // remove myChildComponent prop in parent to test 
+       type: String,
+       required: true,
+       default: 'prop not set'
+     },
+     counter: {
+       type: Number,
+       default: 0
+     }
+   },
   data () {
     return {
       msg: 'Decrement from child'
