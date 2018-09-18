@@ -6,7 +6,7 @@
 
 # Binding attributes and style
 
-# Data, methods, watchers, filters instance properties
+# Data, methods, computed properties, watchers, filters instance properties
 
 # Event Handling
 
