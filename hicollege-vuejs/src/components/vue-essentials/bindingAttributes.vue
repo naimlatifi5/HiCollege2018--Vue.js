@@ -24,6 +24,14 @@
       Binding style as object
     </div>
     <img v-bind:src="imageSrc" />
+
+    <div class="my-box" @click="toggleClass" :class="['success', 'error', {'green': redAttachedClass}]" :style="addClassStyle">
+      1
+    </div>
+    Enter width <input type="text" v-model="Width" /> <br />
+    Enter height <input type="text" v-model="Height"/>
+    <hr />
+
   </div>
 </template>
 
@@ -34,11 +42,34 @@ export default {
     return {
       hiqLink: 'https://www.hiq.se',
       backgroundColor: 'green',
+      activeColor: 'red',
+      fontSize: 20,
       styleObject : {
         color: 'green',
         fontSize: 30 + 'px'
       },
-      imageSrc: 'https://wiki.hiq.se//download/attachments/35684923/5.jpg?version=1&modificationDate=1490616044803&api=v2'
+      imageSrc: 'https://wiki.hiq.se//download/attachments/35684923/5.jpg?version=1&modificationDate=1490616044803&api=v2',
+      redAttachedClass: false,
+      Width: '',
+      Height: '',
+    }
+  },
+  computed: {
+    addClassStyle() {
+      return {
+        'backgroundColor': this.redAttachedClass,
+        'width': this.Width + 'px',
+        'height': this.Height + 'px'
+      }
+
+    }
+  },
+  methods: {
+    toggleClass() {
+      this.redAttachedClass = !this.redAttachedClass;
+    },
+    doSomethingDisabled() {
+      // do something when disabled
     }
   }
 }
@@ -69,5 +100,13 @@ img {
 
   width: 600px;
   height: 150px;
+}
+.green {
+  background-color: green;
+  color: white;
+}
+.my-box {
+  margin: 0 auto;
+  
 }
 </style>
