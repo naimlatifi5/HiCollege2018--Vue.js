@@ -4,7 +4,7 @@
     <!-- One way data binding, message is updated from data to DOM -->
     <p>{{message}}</p>
 
-    <p v-if="question.length">
+    <p>
       Show the question: {{question}}
     </p>
     <!--Two way databinding as question property is updated from the DOM and inside input with v-model -->

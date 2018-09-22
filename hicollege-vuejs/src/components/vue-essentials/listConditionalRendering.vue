@@ -3,7 +3,21 @@
     <h1>Hello list rendering</h1>
     <ul class="list-group" v-for="(item, index) in hiCollegeList">
       <li class="list-group-item" :id="index">{{item.name}} - {{item.foodpreferernce}}</li>
-  </ul>
+    </ul>
+    <!--conditional rendering with v-if  -->
+    <div @click="toggleMeVIf" class="toggle" v-if="visibleVIf">
+      <p>Click to make me invisible- v-if</p>
+    </div>
+    <!--
+    <div v-else-if>
+      Any other condition
+    </div>
+    -->
+    <div class="messageelse" v-else>The div with v-if is removed from DOM</div>
+      <!-- Conditional rendering with v-else -->
+    <div @click="toggleMeVShow" class="toggle" v-show="visibleVShow">
+      <p>Click to make me invisible, v-show</p>
+    </div>
   </div>
 </template>
 
@@ -14,7 +28,7 @@ export default {
     return {
       hiCollegeList: [
         {
-          name: 'Naim Latifi',
+          name: 'Naim Latifis',
           foodpreferernce: 'No pigg meat'
         },
         {
@@ -33,7 +47,17 @@ export default {
           name: 'Patricia Lebsack',
           foodpreferernce: 'Veg'
         }
-      ]
+      ],
+      visibleVIf: true,
+      visibleVShow: true
+    }
+  },
+  methods: {
+    toggleMeVShow() {
+      this.visibleVShow = !this.visibleVShow;
+    },
+    toggleMeVIf() {
+      this.visibleVIf = !this.visibleVIf;
     }
   }
 }
@@ -49,4 +73,15 @@ export default {
       display: block;
     }
   }
+  .toggle{
+    padding: 20px;
+    background-color: red;
+    margin-bottom: 10px;
+  }
+  .messageelse {
+    padding: 20px;
+    background-color: green;
+    margin-bottom: 10px;
+  }
+
 </style>

@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'componentSlot',
+  name: 'componentSlot'
 
 }
 </script>

@@ -1,6 +1,18 @@
 <template>
   <div class="bindingAttributes">
     <h1>hello Binding attributes and style</h1>
+    <!-- bind classes -->
+    <div class="my-box" @click="toggleClass" :class="['success', 'error', {'green': redAttachedClass}]" :style="addClassStyle">
+      1
+    </div>
+    Enter width <input type="text" v-model="Width" /> <br />
+    Enter height <input type="text" v-model="Height"/>
+    <hr />
+    <!-- bind style -->
+    <div class="bind-style" :style="{color : activeColor, fontSize:fontSize + 'px'}" >
+      Binding styles
+    </div>
+
     <a href="https://www.hiq.se">Anchor link</a>
     <br />
     <br />
@@ -16,22 +28,11 @@
     <div class="box red" :class="backgroundColor">
         Hello red div
     </div>
-    <!-- bind style -->
-    <div class="bind-style" :style="{color : activeColor, fontSize:fontSize + 'px'}" >
-      Binding styles
-    </div>
+
     <div class="" :style="styleObject">
       Binding style as object
     </div>
     <img v-bind:src="imageSrc" />
-
-    <div class="my-box" @click="toggleClass" :class="['success', 'error', {'green': redAttachedClass}]" :style="addClassStyle">
-      1
-    </div>
-    Enter width <input type="text" v-model="Width" /> <br />
-    Enter height <input type="text" v-model="Height"/>
-    <hr />
-
   </div>
 </template>
 
@@ -48,7 +49,7 @@ export default {
         color: 'green',
         fontSize: 30 + 'px'
       },
-      imageSrc: 'https://wiki.hiq.se//download/attachments/35684923/5.jpg?version=1&modificationDate=1490616044803&api=v2',
+      imageSrc: 'https://via.placeholder.com/150/24f355',
       redAttachedClass: false,
       Width: '',
       Height: '',
@@ -98,15 +99,18 @@ export default {
 }
 img {
 
-  width: 600px;
-  height: 150px;
+  width: auto;
+  height: auto;
+  margin-bottom: 20px;
 }
 .green {
   background-color: green;
   color: white;
 }
 .my-box {
-  margin: 0 auto;
-  
+  margin: 20px auto;
+  background-color: grey;
+
+
 }
 </style>
