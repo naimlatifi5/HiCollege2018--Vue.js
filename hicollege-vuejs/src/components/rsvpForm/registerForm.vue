@@ -13,7 +13,7 @@
         </div>
       </template>
     </headerSection>
-    <div class="section__content" v-if="formtoggle">
+    <div class="section__content" v-show="formtoggle">
       <div class="row">
         <div class="col-12">
           <form class="rsvp-form" @submit.prevent="formSubmit">
