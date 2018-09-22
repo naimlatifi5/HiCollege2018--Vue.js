@@ -14,12 +14,7 @@
                 Vue is becoming extremely popular JavaScript framework nowadays which lets you build dynamic and interactive web apps in a simple way. The secret of Vue.js framework is its simplicity, however to help you get started with the framework I built this course to get you familiar with the core concepts of the framework.
               </p>
             </div>
-
         </div>
-
-
-
-
           <div class="row section">
             <div class="section__header">
               <div class="col-6">
@@ -52,10 +47,6 @@
               </div>
             </div>
           </div>
-
-
-
-
           <div class="row">
             <table class="table table-hover">
               <thead>
@@ -90,30 +81,34 @@
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to HiCollege HIQ coures with Vue.js'
+  export default {
+    name: 'HelloWorld',
+    data() {
+      return {
+        msg: 'Welcome to HiCollege HIQ coures with Vue.js'
+      }
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  h1,
+  h2 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #42b983;
+  }
 </style>
