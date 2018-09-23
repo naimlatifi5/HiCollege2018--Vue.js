@@ -44,8 +44,8 @@ export default {
   filters: {
     capitalize (str) {
       return str.toLowerCase().replace(/^\w|\s\w/g, function (letter) {
-        return letter.toUpperCase();
-      });
+        return letter.toUpperCase()
+      })
     }
   }
 }

@@ -13,8 +13,8 @@
 
 <script>
 // importing the components
-import firstSection from './components/firstSection.vue';
-import secondSection from './components/secondSection.vue';
+import firstSection from './components/firstSection.vue'
+import secondSection from './components/secondSection.vue'
 
 export default {
   name: 'components',
@@ -25,7 +25,7 @@ export default {
   },
   // component registration
   components: {
-    'first-section' : firstSection,
+    'first-section': firstSection,
     'second-section': secondSection
   }
 }

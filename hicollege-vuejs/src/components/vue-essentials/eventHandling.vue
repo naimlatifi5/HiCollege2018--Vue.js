@@ -4,7 +4,7 @@
     <button class="helloButton" @click="countClicks">Button clicked <template v-if="counter > 0">{{counter}}</template></button><br /><br />
     Capture event handling:
     <input type="text" placeholder="capture events" @keyup.enter="keyPressed('enter')" @keyup.tab="keyPressed('tab')" @keyup.esc="keyPressed('esc')" @keyup.left="keyPressed('left')" @keyup.up="keyPressed('up')" @keyup.down="keyPressed('down')" @keyup.space="keyPressed('space')" @keyup.delete="keyPressed('delete')" @keyup.right="keyPressed('right')" />
-     <p v-for="message in messages" track-by="$index">{{ message }}</p>
+     <p v-for="(message,index) in messages" v-bind:key="index" track-by="$index">{{ message }}</p>
   </div>
 </template>
 
@@ -19,10 +19,10 @@ export default {
   },
   methods: {
     countClicks () {
-      this.counter++;
+      this.counter++
     },
     keyPressed (key) {
-      this.messages.push(`${key} was pressed`);
+      this.messages.push(`${key} was pressed`)
     }
 
   }

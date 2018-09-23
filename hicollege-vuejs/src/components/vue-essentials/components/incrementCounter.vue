@@ -9,9 +9,9 @@
 <script>
 export default {
   name: 'increment',
-  props: //['myChildComponent', 'counter'],
+  props: // ['myChildComponent', 'counter'],
    {
-     myChildComponent: { // remove myChildComponent prop in parent to test 
+     myChildComponent: { // remove myChildComponent prop in parent to test
        type: String,
        required: true,
        default: 'prop not set'
@@ -27,8 +27,8 @@ export default {
     }
   },
   methods: {
-    decrementCounter() {
-      this.$emit('decrement',this.msg);
+    decrementCounter () {
+      this.$emit('decrement', this.msg)
     }
   }
 }

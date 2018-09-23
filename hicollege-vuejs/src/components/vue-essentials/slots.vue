@@ -16,7 +16,6 @@
     </child-component-slot>
     <br />
     <hr />
-
     <!-- Named slot from cardNamedSlot component-->
     <card-named-slot>
       <h1 slot="header">Named slot header1</h1>
@@ -27,8 +26,6 @@
         <p>Hello footer1</p>
       </div>
     </card-named-slot>
-
-
     <card-named-slot>
       <h1 slot="header">Named slot header 2</h1>
       <div slot="body">

@@ -45,31 +45,30 @@ export default {
       backgroundColor: 'green',
       activeColor: 'red',
       fontSize: 20,
-      styleObject : {
+      styleObject: {
         color: 'green',
         fontSize: 30 + 'px'
       },
       imageSrc: 'https://via.placeholder.com/150/24f355',
       redAttachedClass: false,
       Width: '',
-      Height: '',
+      Height: ''
     }
   },
   computed: {
-    addClassStyle() {
+    addClassStyle () {
       return {
         'backgroundColor': this.redAttachedClass,
         'width': this.Width + 'px',
         'height': this.Height + 'px'
       }
-
     }
   },
   methods: {
-    toggleClass() {
-      this.redAttachedClass = !this.redAttachedClass;
+    toggleClass () {
+      this.redAttachedClass = !this.redAttachedClass
     },
-    doSomethingDisabled() {
+    doSomethingDisabled () {
       // do something when disabled
     }
   }
@@ -110,7 +109,5 @@ img {
 .my-box {
   margin: 20px auto;
   background-color: grey;
-
-
 }
 </style>

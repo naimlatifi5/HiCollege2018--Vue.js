@@ -1,8 +1,8 @@
 <template>
   <div class="listRendering">
     <h1>Hello list rendering</h1>
-    <ul class="list-group" v-for="(item, index) in hiCollegeList">
-      <li class="list-group-item" :id="index">{{item.name}} - {{item.foodpreferernce}}</li>
+    <ul class="list-group" v-for="(item, index) in hiCollegeList" v-bind:key="index">
+      <li class="list-group-item" :id="index" v-bind:key="index">{{item.name}} - {{item.foodpreferernce}}</li>
     </ul>
     <!--conditional rendering with v-if  -->
     <div @click="toggleMeVIf" class="toggle" v-if="visibleVIf">
@@ -53,11 +53,11 @@ export default {
     }
   },
   methods: {
-    toggleMeVShow() {
-      this.visibleVShow = !this.visibleVShow;
+    toggleMeVShow () {
+      this.visibleVShow = !this.visibleVShow
     },
-    toggleMeVIf() {
-      this.visibleVIf = !this.visibleVIf;
+    toggleMeVIf () {
+      this.visibleVIf = !this.visibleVIf
     }
   }
 }

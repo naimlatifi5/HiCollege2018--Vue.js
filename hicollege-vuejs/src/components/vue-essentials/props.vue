@@ -32,15 +32,15 @@ export default {
     }
   },
   components: {
-    'increment-counter' : incrementCounter
+    'increment-counter': incrementCounter
   },
   methods: {
-    increment() {
-      this.counter++;
+    increment () {
+      this.counter++
     },
-    decrement(msg) {
-      this.counter--;
-      this.message = msg;
+    decrement (msg) {
+      this.counter--
+      this.message = msg
     }
   }
 }
