@@ -9,7 +9,7 @@
       </thead>
       <tbody>
         <tr v-for="(item,index) in userData" :index="index" :key="index">
-          <td>{{item.name}}</td>
+          <td>{{item.name | capitalize}}</td>
           <td>{{item.comment}}</td>
           <td><removeButton :index="index" @itemClicked="removeItemFromArray"></removeButton></td>
         </tr>
@@ -40,6 +40,13 @@ export default {
   },
   components: {
     removeButton
+  },
+  filters: {
+    capitalize (str) {
+      return str.toLowerCase().replace(/^\w|\s\w/g, function (letter) {
+        return letter.toUpperCase();
+      });
+    }
   }
 }
 </script>
