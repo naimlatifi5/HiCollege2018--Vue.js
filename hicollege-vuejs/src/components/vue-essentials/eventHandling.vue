@@ -14,9 +14,6 @@
          <input type="submit" name="" value="Submit form">
        </fieldset>
      </form>
-     <!-- -->
-
-
     <!-- only trigger handler if event.target is the element itself -->
     <!-- i.e. not from a child element -->
     <!-- Bubbling child -> parent-> root  -->
@@ -34,7 +31,6 @@
   <!--click will be trigged at must once -->
   <a href="#" @click.once="onlyOnce">Click me</a>
 </div>
-
 </template>
 
 <script>
@@ -54,14 +50,14 @@ export default {
       this.messages.push(`${key} was pressed`)
     },
     formSubmit (e) {
-      console.log(e);
+      console.log(e)
     },
     doThat (message) {
-      alert(message);
+      alert(message)
       console.log(message)
     },
     onlyOnce (e) {
-      console.log("How many times clicked ?");
+      console.log('How many times clicked ?')
     }
   }
 }

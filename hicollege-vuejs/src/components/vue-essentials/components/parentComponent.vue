@@ -20,8 +20,8 @@ export default {
   },
   methods: {
     changeMyColor (color) {
-      this.fontSize = 50;
-      this.color = color;
+      this.fontSize = 50
+      this.color = color
     }
   },
   components: {

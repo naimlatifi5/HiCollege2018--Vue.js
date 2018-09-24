@@ -8,7 +8,6 @@
 <script>
 // importing the components
 import parentComponent from './components/parentComponent.vue'
-
 export default {
   name: 'components',
   // component registration
