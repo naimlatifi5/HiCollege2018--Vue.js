@@ -58,7 +58,7 @@ export default {
   computed: {
     addClassStyle () {
       return {
-        'backgroundColor': this.redAttachedClass,
+        'backgroundColor':this.backgroundColor,
         'width': this.Width + 'px',
         'height': this.Height + 'px'
       }
