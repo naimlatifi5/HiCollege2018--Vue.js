@@ -2,7 +2,7 @@
   "name": "hicollegevuejs",
   "version": "1.0.0",
   "description": "Project for hicollege course",
-  "author": "Naim Latifi",
+  "author": "Naim Latifis",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
