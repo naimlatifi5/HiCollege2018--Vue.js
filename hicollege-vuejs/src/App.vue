@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <router-view/>
+    <rsvpMocked></rsvpMocked>
   </div>
 </template>
 
 <script>
+import rsvpMocked from './components/rsvpApp.vue'
 export default {
-  name: 'App'
+  name: 'rsvpApp',
+  components: {
+    rsvpMocked
+  }
 }
 </script>
 

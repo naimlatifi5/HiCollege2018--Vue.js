@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import rsvpApp from '@/components/rsvpApp'
-
+import MainApp from '../App'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'rsvpApp',
-      component: rsvpApp
+      name: 'MainApp',
+      component: MainApp
     }
   ]
 })
