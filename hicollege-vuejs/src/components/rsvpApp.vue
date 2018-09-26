@@ -2,9 +2,9 @@
   <div class="hello">
     <div class="container">
         <h1>RSVP- APP <span class="badge badge-secondary badge-secondary--color">HiCollege HIQ</span></h1>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-        </div>
+
+
+        <!-- make as component -->
         <div class="row section">
             <div class="section__header">
                 <h2>Vue.js HiCollege course</h2>
@@ -15,15 +15,27 @@
               </p>
             </div>
         </div>
+
+
+
           <div class="row section">
+            <!-- make progress bar as component <progress-bar></progress-bar>-->
+            <div class="progress">
+               <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+           </div>
+
+           <!-- make as component header with slots <header-section></header-section> -->
             <div class="section__header">
-              <div class="col-6">
-                <h5>55 people attending</h5>
-              </div>
-              <div class="col-6">
-                <button type="button" class="btn btn-primary btn-lg">I will attend</button>
+              <div class="row">
+                <div class="col-4 align-left">
+                  <h5>55 people attending</h5>
+                </div>
+                <div class="col-8 align-right">
+                  <button type="button" class="btn btn-primary btn-lg">I will attend</button>
+                </div>
               </div>
             </div>
+
             <div class="section__content">
               <div class="row">
                 <div class="col-12">
@@ -46,7 +58,9 @@
                 </div>
               </div>
             </div>
+
           </div>
+          <!-- display table <display-table></display-table> -->
           <div class="row">
             <table class="table table-hover">
               <thead>
@@ -76,7 +90,6 @@
             </table>
           </div>
     </div>
-
   </div>
 </template>
 
@@ -96,6 +109,7 @@
   h1,
   h2 {
     font-weight: normal;
+
   }
 
   ul {
