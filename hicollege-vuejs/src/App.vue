@@ -20,7 +20,7 @@ export default {
     return {
       mainPageHeader: '<h1>RSVP- APP <span class="badge badge-secondary badge-secondary--color">HiCollege HIQ</span></h1>',
       contentIntroCourse: 'Vue is becoming extremely popular JavaScript framework nowadays which lets you build dynamic and interactive web apps in a simple way. The secret of Vue.js framework is its simplicity, however to help you get started with the framework I built this course to get you familiar with the core concepts of the framework.',
-      maxNumberAttendance: 2
+      maxNumberAttendance: 15
     }
   },
   computed: {
